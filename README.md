@@ -11,6 +11,6 @@ GroceryDB and the associated http://TrueFood.Tech/ website make this information
 
 - data/GroceryDB_foods.csv &rarr; This file includes all the foods in GroceryDB as well as their store, brand, FPro ([food processing score](https://www.medrxiv.org/content/10.1101/2021.05.22.21257615)), and nutrition facts normalized in 100 grams.
 
-- data/GroceryDB_IgFPro &rarr; This file includes the IgFPro (ingredient food processing score) that estimates the contribution of over 1000 ingredient to food ultra-processing.
+- data/GroceryDB_IgFPro &rarr; This file includes the IgFPro (ingredient food processing score) that estimates the contribution of over 1000 ingredients to food ultra-processing.
 
-- data/GroceryDB_training_dataset_SRFNDSS_2001_2018_NOVA123_multi_compositions_12Nutrients.csv &rarr; This file includes the foods and their manual NOVA labels that we used to train [FoodProX](https://www.medrxiv.org/content/10.1101/2021.05.22.21257615) to obtain FPro of products in grocery stores.
+- data/GroceryDB_training_dataset_SRFNDSS_2001_2018_NOVA123_multi_compositions_12Nutrients.csv &rarr; This file includes the foods and their manual NOVA labels that we used to train [FoodProX](https://www.medrxiv.org/content/10.1101/2021.05.22.21257615) and obtain the FPro of products in grocery stores.
