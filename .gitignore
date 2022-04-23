@@ -1,7 +1,6 @@
 /classifiers/
 /build_datasets/output/
 /temp/
-/data/
 /Key Papers for the Analyssis/
 *.sas7bdat
 *.XPT
@@ -13,7 +12,6 @@
 *.mdb
 *.doc
 *.docx
-*.csv
 *.xlsx
 *.xls
 *.png
