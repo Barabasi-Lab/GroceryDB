@@ -7,6 +7,13 @@ We find that the nutritional choices of the consumers, translated as the degree 
 We show that there is no single nutrient or ingredient "bio-marker" for ultra-processed food, allowing us to quantify the individual contribution of over 1,000 ingredients to ultra-processing. 
 GroceryDB and the associated http://TrueFood.Tech/ website make this information available, aiming to simultaneously empower the consumers to make healthy food choices, and aid policy makers to reform the food supply.
 
+# Related Publications
+
+- Machine Learning Prediction of Food Processing ([medRxiv, 2021](https://www.medrxiv.org/content/10.1101/2021.05.22.21257615))
+
+- GroceryDB: Prevalence of Processed Food in Grocery Stores
+ ([medRxiv, 2022](https://www.medrxiv.org/content/10.1101/2022.04.23.22274217))
+
 # Data Files
 
 - data/GroceryDB_foods.csv &rarr; This file includes all the foods in GroceryDB as well as their store, brand, FPro ([food processing score](https://www.medrxiv.org/content/10.1101/2021.05.22.21257615)), and nutrition facts normalized in 100 grams.
