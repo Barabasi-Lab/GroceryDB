@@ -21,7 +21,6 @@
 *.RData
 *.RDataTmp
 *.pyc
-config.json
 google_service_credentials.json
 *.log
 *.pickle

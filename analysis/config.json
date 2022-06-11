@@ -1,0 +1,13 @@
+{
+  "FoodData_central_path": "D:/Foodome Datasets/FoodData_Central_csv_2021-04-28/",
+  "connections_strings": {
+    "GDB-Products-C1": "mongodb+srv://gdb:MfnNO84j2w1BH2fB@gdbproductsc1.ioay5.mongodb.net/admin?replicaSet=atlas-10s7ss-shard-0&readPreference=primary&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1",
+    "GDB-Images-C1": ""
+  },
+  "ingredient_trees": {
+    "paths": {
+      "additives": "D:/SoftwareProject/GroceryDBDev/ingredient_tree/FDA_substances_added_to_food.csv"
+    }
+  },
+  "Classifiers_path": "D:/SoftwareProject/GroceryDBDev/classifiers/"
+}
