@@ -27,7 +27,7 @@ google_service_credentials.json
 *.log
 *.pickle
 *.cys
-/notebooks/output/*
-!notebooks/count_ingredients/*
-notebooks/count_ingredients/.ipynb_checkpoints/*
+/analysis/output/*
+!/analysis/output/readme.txt
 *.eps
+analysis/.ipynb_checkpoints/*
