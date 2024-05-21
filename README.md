@@ -9,10 +9,10 @@ GroceryDB and the associated http://TrueFood.Tech/ website make this information
 
 # Related Publications
 
-- Machine Learning Prediction of Food Processing ([medRxiv, 2021](https://www.medrxiv.org/content/10.1101/2021.05.22.21257615))
+- Machine Learning Prediction of the Degree of Food Processing ([Nature Communications, 2023](https://www.nature.com/articles/s41467-023-37457-1))
 
 - GroceryDB: Prevalence of Processed Food in Grocery Stores
- ([medRxiv, 2022](https://www.medrxiv.org/content/10.1101/2022.04.23.22274217))
+ ([medRxiv, 2024](https://www.medrxiv.org/content/10.1101/2022.04.23.22274217))
 
 # Data Files
 
