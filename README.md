@@ -24,9 +24,9 @@ GroceryDB and the associated http://TrueFood.Tech/ website make this information
 
 - data/GroceryDB_cereal_brands_manually_annotated.xlsx &rarr; This file contains the brands of cereals we used in the analysis.
 
-- [USDA_FDC_BFPD_April2021_branded_food_classified_FPro_12NutPanel_min_10_nuts.csv](https://www.dropbox.com/s/1o99s1jgf66evls/USDA_FDC_BFPD_April2021_branded_food_classified_FPro_12NutPanel_min_10_nuts.csv?dl=0) &rarr; This file provides FPro (column 'AZ') for foods in USDA BFPD (Global Branded Food Products Database, version April 2021) database that have the minimum of 10 out of 12 mandated nutrients on nutrition fact labels.
-- 
-- [NHANES_2003_2018_FoodSource_Consumed.csv](https://www.dropbox.com/s/lae45qdgu8ifdk4/NHANES_2003_2018_FoodSource_Consumed.csv?dl=0) &rarr; This file provides the source of food consumed by NHANES participants, capturing the variables DR1FS and DR2FS that corresponds to \Where did
+- [USDA_FDC_BFPD_April2021_branded_food_classified_FPro_12NutPanel_min_10_nuts.csv](https://drive.google.com/file/d/1MD5LeSHtCe-Km6DCw39z1UTfGhlOTA6N/view?usp=drive_link) &rarr; This file provides FPro (column 'AZ') for foods in USDA BFPD (Global Branded Food Products Database, version April 2021) database that have the minimum of 10 out of 12 mandated nutrients on nutrition fact labels.
+  
+- [NHANES_2003_2018_FoodSource_Consumed.csv](https://drive.google.com/file/d/1MDJtbm5nnY2DPz_Q5ijhrusZ5lSlu9Dl/view?usp=drive_link) &rarr; This file provides the source of food consumed by NHANES participants, capturing the variables DR1FS and DR2FS that corresponds to \Where did
 you get (this/most of the ingredients for this)?", found at (https://wwwn:cdc:gov/Nchs/
 Nhanes/2017-2018/DR1IFF J:htm#DR1FS).
 
