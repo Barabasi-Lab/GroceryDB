@@ -51,19 +51,11 @@ bad_categories_more_strict = bad_categories + [
 def rgb_to_hex(rgb):
     rgb = (int(rgb[0]), int(rgb[1]), int(rgb[2]))
     result = '#%02x%02x%02x' % tuple(rgb)
-    # print(result)
     return result
 
 
 colors_stores = {
-    # OLD
-    # 'Walmart': rgb_to_hex([56, 108, 176]),
-    # 'Target': rgb_to_hex([240, 2, 127]),
-    # 'WholeFoods': rgb_to_hex([191, 91, 23])
-    #
-    # 'Walmart_0': rgb_to_hex([252, 182, 79]),
     'Walmart': rgb_to_hex([253, 187, 48]),
-    #
     'Target': rgb_to_hex([204, 0, 1]),
     'WholeFoods': rgb_to_hex([0, 111, 70])
 }
@@ -499,46 +491,13 @@ def order_ingredient(ingredient_list, search_for_list):
     return 0
 
 
-# import pandas as pd
 import numpy as np
-# import seaborn as sns
-# import matplotlib.pyplot as plt
-# from sklearn.linear_model import LogisticRegression
-# from sklearn.preprocessing import StandardScaler
-# from sklearn.manifold import TSNE
-# from sklearn.model_selection import train_test_split
-# from sklearn.svm import SVC
-# from sklearn.metrics import accuracy_score
-# from sklearn.feature_selection import VarianceThreshold
-# from sklearn.feature_selection import RFE
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import precision_score, recall_score, roc_auc_score, roc_curve, average_precision_score, \
     precision_recall_curve
-# from scipy import interp
-# from sklearn.model_selection import cross_val_score
-# from sklearn.metrics import classification_report
-# from sklearn.model_selection import RandomizedSearchCV
 from sklearn.preprocessing import LabelBinarizer
-# from sklearn.model_selection import cross_val_predict
-# from sklearn.metrics import confusion_matrix
-# import joblib
 from sklearn.model_selection import StratifiedKFold
 from imblearn.over_sampling import SMOTE
-
-
-# from tqdm import tqdm
-# import plotly.express as px
-# from sklearn.decomposition import PCA
-# import umap
-# import matplotlib
-# import operator
-
-
-# AUC ROC Curve Scoring Function for Multi-class Classification
-# "macro"
-# "weighted"
-# None
-
 
 def multiclass_roc_auc_score(y_test, y_probs, average="macro"):
     lb = LabelBinarizer()
@@ -713,10 +672,13 @@ def plot_price_per_cal(
 
     for bin_end in np.arange(min_FPro_filter, 1.01, 0.1):
         if bin_end not in store_compare_data_df['FPro bin'].values:
-            store_compare_data_df = store_compare_data_df.append(
-                {'name': 'empty', 'store': None, 'FPro bin': round(bin_end, 2)},
-                ignore_index=True)
+            store_compare_data_df = pd.concat([store_compare_data_df,
+                pd.DataFrame([{'name': 'empty', 'store': None, 'FPro bin': round(bin_end, 2)}])
+                ], ignore_index=True)
             pass
+        
+            
+
 
     ax = sns.boxplot(x=col_bin, y=col_yaxis, data=store_compare_data_df,
                      hue="store", palette=colors_stores, hue_order=stores, width=width_box
@@ -732,7 +694,7 @@ def plot_price_per_cal(
     # 6 --> 1.0
 
     nobs = store_compare_data_df.groupby([col_bin, 'store']).size().to_dict()
-    box_min_vals = store_compare_data_df.groupby([col_bin, 'store']).agg({col_yaxis: np.min}).to_dict()[col_yaxis]
+    box_min_vals = store_compare_data_df.groupby([col_bin, 'store']).agg({col_yaxis: 'min'}).to_dict()[col_yaxis]
     # print(nobs)
 
     stores_in_data = store_compare_data_df['store'].unique()
@@ -848,7 +810,7 @@ def plot_all_categories_FPro(
     cat_stats = (
         data_df.groupby(col_category)
             .agg(
-            FPro_median=(col_FPro, np.median),
+            FPro_median=(col_FPro,'median'),
             count_products=(col_FPro, np.size)
         )
             .sort_values(by='FPro_median')
@@ -879,7 +841,7 @@ def plot_all_categories_FPro(
     plt.tight_layout(pad=0.5)
     plt.savefig(export_path, dpi=300)
 
-    return ax
+    return ax, cat_stats
 
 
 def plot_categories_FPro(
@@ -1335,16 +1297,22 @@ def plot_correlation_matrix(
     plt.rc('legend', fontsize=SMALL_SIZE)  # legend fontsize
     plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
 
-    plt.figure(figsize=figsize, dpi=150)
-
+    plt.figure(figsize=figsize, dpi=300)
+    
+    heatmap_data = cat_corr_df.set_index('cat count')[cols_heatmap]
+    mask = heatmap_data.isnull()
+    heatmap_data_annot = heatmap_data.fillna('')
+    
     g = sns.heatmap(
         cat_corr_df.set_index('cat count')[cols_heatmap],
         vmin=vmin_vmax[0],
         vmax=vmin_vmax[1],
         cmap=['BrBG', 'RdYlBu_r'][-1],
+        center=0,
         xticklabels=xticklabels,
-        annot=True,
-        fmt=fmt
+        annot=heatmap_data_annot,
+        fmt=fmt,
+        mask=mask
     )
 
     if title is not None:
