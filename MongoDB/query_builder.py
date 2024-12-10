@@ -6,7 +6,7 @@ import certifi
 mongoDB_CleanedData = 'CleanedData_temp'
 
 #Removing categories that do not work in our GroceryDB analysis
-bad_categories = ['non-food', 'multi-items', 'alcohol']
+bad_categories = ['non-food', 'multi-items', 'alcohol', 'not_valid']
 
 bad_categories_more_strict = bad_categories + [
     'exempt', 'no-category', 'maybe-bug', 'find-category']
