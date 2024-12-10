@@ -5,6 +5,12 @@ import certifi
 
 mongoDB_CleanedData = 'CleanedData_temp'
 
+#Removing categories that do not work in our GroceryDB analysis
+bad_categories = ['non-food', 'multi-items', 'alcohol']
+
+bad_categories_more_strict = bad_categories + [
+    'exempt', 'no-category', 'maybe-bug', 'find-category']
+
 with open('config.json', 'r') as f:
     config_local = json.loads(f.read())
     pass
@@ -20,11 +26,15 @@ def get_mongo_databases(verbose=False):
 
     clients['products'] = MongoClient(config_local['connections_strings']['GDB-Products-C1'], tlsCAFile=certifi.where())
 
+    # Send a ping to confirm a successful connection
+    clients['products'].admin.command('ping')
+    print("Ping Successful! You are connected to MongoDB!")
+
     if verbose:
-        print('Products Cluster DBs:')
-        for db in clients['products'].list_databases():
-            print(db)
-        pass
+        print('GroceryDB Permissions:')
+        status=clients['products'].admin.command("connectionStatus")
+        print(status['authInfo']['authenticatedUserRoles'][0]['role'])
+        print(status['authInfo']['authenticatedUserRoles'][1]['role'])
 
     databases['GroceryDB'] = clients['products']['GroceryDB']
 
