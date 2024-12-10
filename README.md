@@ -18,9 +18,12 @@ GroceryDB and the associated http://TrueFood.Tech/ website make this information
 
 # Data Files
 
+- data/GroceryDB Source Data.xlsx &rarr; This file includes all the processed data used to generate the figures within the publication at Nature
+  Food.
+
 - data/GroceryDB_foods.csv &rarr; This file includes all the foods in GroceryDB as well as their store, brand, FPro ([food processing score](https://www.nature.com/articles/s41467-023-37457-1)), and nutrition facts normalized per 100 grams.
 
-- data/GroceryDB_IgFPro &rarr; This file includes the IgFPro (ingredient food processing score) that estimates the contribution of over 1,000 ingredients to food ultra-processing.
+- data/GroceryDB_IgFPro.csv &rarr; This file includes the IgFPro (ingredient food processing score) that estimates the contribution of over 1,000 ingredients to food ultra-processing.
 
 - data/GroceryDB_training_dataset_SRFNDSS_2001_2018_NOVA123_multi_compositions_12Nutrients.csv &rarr; This file includes the foods and their manual NOVA labels that we used to train [FoodProX](https://www.nature.com/articles/s41467-023-37457-1) and obtain the FPro of products in grocery stores.
 
@@ -28,6 +31,34 @@ GroceryDB and the associated http://TrueFood.Tech/ website make this information
   
 - [NHANES_2003_2018_FoodSource_Consumed.csv](https://drive.google.com/file/d/1MDJtbm5nnY2DPz_Q5ijhrusZ5lSlu9Dl/view?usp=drive_link) &rarr; This file provides the source of food consumed by NHANES participants, capturing the variables DR1FS and DR2FS that corresponds to \Where did
 you get (this/most of the ingredients for this)?", found at [NHANES](https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Dietary&CycleBeginYear=2017).
+
+# GroceryDB on MongoDB
+MongoDB is a NoSQL database that uses a JSON-like format for data storage. 
+All the data scraped from Target, Walmart, and Whole Foods are available on our MongoDB server.
+We provide both the raw data and the cleaned data that is used for GroceryDB.
+
+## Connecting to MongoDB
+You will require two files to connect: query_builder.py and config.json, where the py file contains 
+the functions necessary to establish a connection to MongoDB and the json file contains the necessary 
+keys to successfully connect.
+
+Install required python packages: pymongo, certifi, json, tqdm, and pandas.
+
+After you have the necessary packages and files on your computer, run the jupyter notebook example 
+to load the MongoDB data for downstream use.
+
+## Datasets Available
+
+- **CleanedData**: contains the FPro scores of all products from Target, Walmart, and Whole Foods. The FPro scores
+  are calculated using a panel of nutrients from each product's provided nutrient table. For each nutrient
+  the reported value and the convert value to g/100g are given. There are two FPro scores given, one with a 12
+  nutrient panel and another with a 10 nutrient panel. Calories, price per calorie, and price per gram are found
+  in this dataset.
+
+- **ProductIngredients**: contains the ingredient list of each product from Target, Walmart, and Whole Foods in the
+  format of an ingredient tree. Each ingredient reports its order in the ingredient list, parent order, depth, and
+  distance to root node. Our disambiguation of ingredient names is given as well as the original name. Ingredients
+  are identified as additive if they are considered additives by the USDA.
 
 # Cite GroceryDB
 
