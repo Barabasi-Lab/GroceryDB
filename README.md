@@ -1,7 +1,7 @@
 # What is GroceryDB?
 The offering of grocery stores is a strong driver of consumer decisions, shaping their diet and long-term health. 
 While processed food has been increasingly associated with unhealthy diet, information on the degree of processing characterizing an item in a store is virtually impossible to obtain, limiting the ability of individuals to make informed choices. 
-Here we introduce GroceryDB, a database with over 50,000 food items sold by Walmart, Target, and Wholefoods, unveiling the degree of processing characterizing each food. 
+Here we introduce GroceryDB, a database with over 50,000 food items sold by Walmart, Target, and Whole Foods, unveiling the degree of processing characterizing each food. 
 GroceryDB indicates that 73% of the US food supply is ultra-processed, and on average ultra-processed foods are 52% cheaper than minimally-processed alternatives. 
 We find that the nutritional choices of the consumers, translated as the degree of food processing, strongly depend on the food categories and grocery stores. 
 We show that there is no single nutrient or ingredient "biomarker" for ultra-processed food, allowing us to quantify the individual contribution of over 1,000 ingredients to ultra-processing. 
