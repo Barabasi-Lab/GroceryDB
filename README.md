@@ -23,6 +23,9 @@ GroceryDB and the associated http://TrueFood.Tech/ website make this information
 
 - data/GroceryDB_foods.csv &rarr; This file includes all the foods in GroceryDB as well as their store, brand, FPro ([food processing score](https://www.nature.com/articles/s41467-023-37457-1)), and nutrition facts normalized per 100 grams.
 
+- data/UpdatedProductsIngredients_11_15.zip &rarr; This is a zipped json file of the disambiguated product ingredient trees used calculate tree features within the Nature
+  Food publication. Schematic trees in the paper are generated from this file.
+
 - data/GroceryDB_IgFPro.csv &rarr; This file includes the IgFPro (ingredient food processing score) that estimates the contribution of over 1,000 ingredients to food ultra-processing.
 
 - data/GroceryDB_training_dataset_SRFNDSS_2001_2018_NOVA123_multi_compositions_12Nutrients.csv &rarr; This file includes the foods and their manual NOVA labels that we used to train [FoodProX](https://www.nature.com/articles/s41467-023-37457-1) and obtain the FPro of products in grocery stores.
