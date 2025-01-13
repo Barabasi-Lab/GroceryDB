@@ -1,11 +1,6 @@
 # What is GroceryDB?
-The offering of grocery stores is a strong driver of consumer decisions, shaping their diet and long-term health. 
-While processed food has been increasingly associated with unhealthy diet, information on the degree of processing characterizing an item in a store is virtually impossible to obtain, limiting the ability of individuals to make informed choices. 
-Here we introduce GroceryDB, a database with over 50,000 food items sold by Walmart, Target, and Whole Foods, unveiling the degree of processing characterizing each food. 
-GroceryDB indicates that 73% of the US food supply is ultra-processed, and on average ultra-processed foods are 52% cheaper than minimally-processed alternatives. 
-We find that the nutritional choices of the consumers, translated as the degree of food processing, strongly depend on the food categories and grocery stores. 
-We show that there is no single nutrient or ingredient "biomarker" for ultra-processed food, allowing us to quantify the individual contribution of over 1,000 ingredients to ultra-processing. 
-GroceryDB and the associated http://TrueFood.Tech/ website make this information available, aiming to simultaneously empower the consumers to make healthy food choices, and aid policy makers to reform the food supply.
+
+The offering of grocery stores is a strong driver of consumer decisions. While highly processed foods such as packaged products, processed meat and sweetened soft drinks have been increasingly associated with unhealthy diets, information on the degree of processing characterizing an item in a store is not straightforward to obtain, limiting the ability of individuals to make informed choices. GroceryDB, a database with over 50,000 food items sold by Walmart, Target and Whole Foods, shows the degree of processing of food items and potential alternatives in the surrounding food environment. The extensive data gathered on ingredient lists and nutrition facts enables a large-scale analysis of ingredient patterns and degrees of processing, categorized by store, food category and price range. Furthermore, it allows the quantification of the individual contribution of over 1,000 ingredients to ultra-processing. GroceryDB and the associated http://TrueFood.Tech/ website make this information accessible, guiding consumers toward less processed food choices.
 
 # Related Publications
 
