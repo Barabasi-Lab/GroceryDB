@@ -69,10 +69,11 @@ If you find GroceryDB useful in your research, please add the following citation
 
 ```
 @misc{GroceryDB,
-      title={GroceryDB: Prevalence of Processed Food in Grocery Stores}, 
-      author={Babak Ravandi and Peter Mehler and Albert-László Barabási and Giulia Menichetti},
-      year={2022},
-      eprint={medRxiv:2022.04.23.22274217},
-      url = {https://www.medrxiv.org/content/10.1101/2022.04.23.22274217}
+      title={Prevalence of processed foods in major US grocery stores}, 
+      author={Babak Ravandi and Gordana Ispirova and Michael Sebek and Peter Mehler and Albert-László Barabási and Giulia Menichetti},
+      journal={Nature Food}
+      year={2025},
+      dio={10.1038/s43016-024-01095-7},
+      url = {https://www.nature.com/articles/s43016-024-01095-7}
 }
 ```
