@@ -8,8 +8,7 @@ The offering of grocery stores is a strong driver of consumer decisions. While h
 
 - Machine learning prediction of the degree of food processing ([Nature Communications, 2023](https://www.nature.com/articles/s41467-023-37457-1))
 
-- Prevalence of processed foods in major US grocery stores
- ([Nature Food, 2025](https://www.nature.com/articles/s43016-024-01095-7))
+- Prevalence of processed foods in major US grocery stores ([Nature Food, 2025](https://rdcu.be/d55mU))
 
 # Data Files
 
