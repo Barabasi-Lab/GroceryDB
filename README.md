@@ -13,8 +13,8 @@ GroceryDB and the associated http://TrueFood.Tech/ website make this information
 
 - Machine learning prediction of the degree of food processing ([Nature Communications, 2023](https://www.nature.com/articles/s41467-023-37457-1))
 
-- GroceryDB: prevalence of processed food in grocery stores
- ([medRxiv, 2024](https://www.medrxiv.org/content/10.1101/2022.04.23.22274217))
+- Prevalence of processed foods in major US grocery stores
+ ([Nature Food, 2025](https://www.nature.com/articles/s43016-024-01095-7))
 
 # Data Files
 
